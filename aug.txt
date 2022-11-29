@@ -1,0 +1,7 @@
+Lehet augusztusi hõmérséklet.
+Legmagasabb hõmérséklet: 41
+Legmagasabb hõmérséklet: 41
+A hõmérséklet ennyiszer volt 31C felett: 10
+Augusztus 20-án ennyi volt a hõmérséklet: 26
+A hõmérséklet átlaga:      33.64
+A hõingadozás: 18

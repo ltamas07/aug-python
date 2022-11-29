@@ -1,0 +1,52 @@
+aug = [38,36,31,27,38,24,29,29,30,24,33,27,32,24,36,31,41,30,26,34,26,30,31,26,36,23,31,28,31,32,28]
+
+augfile = open('aug.txt','w')
+t = len(aug)
+if t == 31:
+    print('Lehet augusztusi hőmérséklet.')
+    augfile.write(f'Lehet augusztusi hőmérséklet.\n')
+else:
+    print('Nem lehet augusztusi hőmérséklet.')
+    augfile.write(f'Nem lehet augusztusi hőmérséklet.\n')
+    
+## MAXIMUM / MINIMUM
+maxA = aug[0]
+minA = aug[0]
+for szam in aug:
+    if szam > maxA:
+        maxA = szam
+    if szam < minA:
+        minA = szam
+print(f'Legmagasabb hőmérséklet: {maxA}')
+augfile.write(f'Legmagasabb hőmérséklet: {maxA}\n')
+print(f'Legalacsonyabb hőmérséklet: {minA}')
+augfile.write(f'Legmagasabb hőmérséklet: {maxA}\n')
+
+## ELDÖNTÉS 
+osszeg = 0 
+for homerseklet in aug:
+    if homerseklet > 31:
+        osszeg = osszeg + 1
+print(f'A hőmérséklet ennyiszer volt 31C felett: {osszeg}')
+augfile.write(f'A hőmérséklet ennyiszer volt 31C felett: {osszeg}\n')
+
+## AUG. 20 HŐMÉRSÉKLET
+
+print(f'Augusztus 20-án ennyi volt a hőmérséklet: {aug[20]}')
+augfile.write(f'Augusztus 20-án ennyi volt a hőmérséklet: {aug[20]}\n')
+
+## ÁTLAG SZÁMÍTÁS
+ossz = 0
+for szamok in aug:
+    ossz = ossz + szamok
+atlag = ossz / szamok
+print(f'A hőmérséklet átlaga: {atlag:0.2f}')
+augfile.write(f'A hőmérséklet átlaga: {atlag:10.2f}\n')
+
+## HŐINGÁS
+
+hoingas = maxA - minA
+print(f'A hőingadozás: {hoingas}')
+augfile.write(f'A hőingadozás: {hoingas}\n')
+
+augfile.close()
